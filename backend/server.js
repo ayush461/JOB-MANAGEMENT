@@ -4,14 +4,14 @@ const mongoose = require("mongoose");
 const passportConfig = require("./lib/passportConfig");
 const cors = require("cors");
 const fs = require("fs");
-
+require("dotenv").config()
 // MongoDB
 // MONGO_URI="mongodb+srv://poru:poru@cluster0.pmozonm.mongodb.net/?retryWrites=true&w=majority"
 // PORT=5050
 // JWT_SECRET="eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY3OTg1NDgwMywiaWF0IjoxNjc5ODU0ODAzfQ.7JZpjOBBc_yKKQJspKpMtmyePI0Nn1fRaUl2mkV4o2E"
 
 mongoose
-  .connect("mongodb+srv://poru:poru@cluster0.pmozonm.mongodb.net/?retryWrites=true&w=majority", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -32,7 +32,7 @@ if (!fs.existsSync("./public/profile")) {
 }
 
 const app = express();
-const port =  4444;
+const port =  process.env.port || 5000;
 
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
