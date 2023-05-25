@@ -6,7 +6,6 @@ const cors = require("cors");
 const fs = require("fs");
 require("dotenv").config();
 // MongoDB
-// MONGO_URI="mongodb+srv://poru:poru@cluster0.pmozonm.mongodb.net/?retryWrites=true&w=majority"
 // PORT=5050
 // JWT_SECRET="eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY3OTg1NDgwMywiaWF0IjoxNjc5ODU0ODAzfQ.7JZpjOBBc_yKKQJspKpMtmyePI0Nn1fRaUl2mkV4o2E"
 
