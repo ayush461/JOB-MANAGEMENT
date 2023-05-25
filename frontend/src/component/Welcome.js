@@ -11,7 +11,7 @@ const Welcome = (props) => {
       style={{ padding: "30px", minHeight: "93vh" }}
     >
       <Grid item>
-        <Typography variant="h2">Welcome to Job Portal made by AYUSH AGARWAL.</Typography>
+        <Typography variant="h2">Welcome to Job Portal made by AYUSH AGARWAL</Typography>
       </Grid>
     </Grid>
   );
